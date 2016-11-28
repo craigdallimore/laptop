@@ -18,9 +18,9 @@ cd ~
 git init
 git remote add origin git@github.com:craigdallimore/dotfiles.git
 git pull
+```
 
 ### Get documents
-
 
 MacOS Prep
 ------------
@@ -41,8 +41,11 @@ killall Dock
 ### Speed up keyboard
 
 System Preferences -> Keyboard -> Keyboard Tab -> Keyboard Repeat
+
 (Fastest)
+
 System Preferences -> Keyboard -> Keyboard Tab -> Delay Until Repeat
+
 (Shortest)
 
 ### Unbind ctrl-down
