@@ -10,6 +10,7 @@
     - reattach-to-user-namespace
     - ssh-copy-id
     - task
+    - haskell-stack
 
 - name: Install python neovim support
   pip:
