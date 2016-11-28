@@ -1,0 +1,19 @@
+---
+
+- hosts: localhost
+  connection: local
+  become: true
+  vars:
+    whoami: "{{ lookup('env', 'USER') }}"
+    user_home: "{{ lookup('env', 'HOME') }}"
+    git_user_name: "Craig Dallimore"
+    git_user_email: "decoy9697@gmail.com"
+    role_basic_done: false
+#   role_cc_done: false
+#   role_javascript_done: false
+#   role_vcs_done: false
+  roles:
+    - basic
+#   - cc
+#   - javascript
+#   - vcs

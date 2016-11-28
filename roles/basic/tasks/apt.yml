@@ -1,0 +1,30 @@
+---
+
+- name: Install useful packages
+  apt: name={{item}} state=present
+  with_items:
+    - tmux
+# NEOVIM / plug
+# Try https://github.com/dotstrap/ansible-neovim/blob/master/tasks/main.yml
+
+# Chromium
+- name: add ppa repository
+  apt_repository:
+    repo: 'ppa:canonical-chromium-builds/stage'
+    state: present
+    update_cache: yes
+  become: yes
+  become_user: root
+
+- name: install chromium
+  apt:
+    name: chromium-browser
+    state: present
+  become: yes
+  become_user: root
+
+# zsh and oh-my-zsh
+- name: install zsh
+  apt: name={{item}} state=present
+  with_items:
+    - zsh
