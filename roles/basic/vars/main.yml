@@ -1,5 +1,6 @@
 ---
 
 nvm:
+  path: '~/.nvm'
   version: v0.32.1
   node_version: '4.3.0'
