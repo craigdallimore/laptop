@@ -4,6 +4,7 @@
   apt: name={{item}} state=present
   with_items:
     - tmux
+    - task
 # NEOVIM / plug
 # Try https://github.com/dotstrap/ansible-neovim/blob/master/tasks/main.yml
 

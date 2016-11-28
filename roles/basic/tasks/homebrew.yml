@@ -1,5 +1,13 @@
 ---
 
+- name: Install python neovim support
+  pip:
+    name={{item}}
+    state=present
+    extra_args=--user
+  with_items:
+    - neovim
+
 - name: Install various useful packages
   homebrew: name={{item}} state=present
   with_items:
@@ -8,6 +16,7 @@
     - neovim/neovim/neovim
     - reattach-to-user-namespace
     - ssh-copy-id
+    - task
 
 - name: Install packages requiring brew-cask
   homebrew_cask: name={{item}} state=present
