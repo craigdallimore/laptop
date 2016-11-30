@@ -1,5 +1,13 @@
 ---
 
+# Various
+# -----------------------------------------------------------------------------
+
+- name: Install gems
+  gem: name={{item}} state=present
+  with_items:
+    - scss-lint
+
 # ZSH
 # -----------------------------------------------------------------------------
 
@@ -50,6 +58,17 @@
   command: bash -c '. {{nvm.path}}/nvm.sh; nvm alias default {{ nvm.node_version }}'
   when: nvm_check_default|failed
 
+# NPM
+# -----------------------------------------------------------------------------
+- name: Install npm global modules
+  command: npm i -g {{item}}
+  with_items:
+    - eslint
+    - eslint-plugin-react
+    - eslint-plugin-babel
+    - jscs
+    - esprima-fb
+
 # Neovim
 # -----------------------------------------------------------------------------
 - name: check neovim symlink
@@ -91,3 +110,16 @@
 
 - name: install | plugins
   command: nvim "+silent! PlugInstall!" +qall!
+
+- name: install | ternjs
+  command: npm i
+  args:
+    chdir: ~/.vim/plugged/tern_for_vim
+
+# Haskell
+# -----------------------------------------------------------------------------
+- name: Install useful haskell utilities
+  command: stack install {{item}}
+  with_items:
+    - criterion
+    - hoogle
