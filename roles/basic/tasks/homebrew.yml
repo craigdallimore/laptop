@@ -11,6 +11,7 @@
     - ssh-copy-id
     - task
     - haskell-stack
+    - dockutil
 
 - name: Install python neovim support
   pip:
@@ -41,3 +42,4 @@
   homebrew: name={{item}} state=present
   with_items:
     - zsh
+
