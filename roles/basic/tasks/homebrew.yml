@@ -13,6 +13,11 @@
     - haskell-stack
     - dockutil
 
+- name: Install tmuxinator
+  gem: name={{item}} state=present
+  with_items:
+    - tmuxinator
+
 - name: Install python neovim support
   pip:
     name={{item}}
