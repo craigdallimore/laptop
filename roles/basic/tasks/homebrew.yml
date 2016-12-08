@@ -41,6 +41,10 @@
     - google-chrome
     - iterm2
     - slack
+    - flux
+    - firefox
+    - spotify
+    - sketch
 
 # zsh and oh-my-zsh
 - name: install zsh
