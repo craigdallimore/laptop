@@ -12,43 +12,19 @@
     - task
     - haskell-stack
     - dockutil
-
-- name: Install tmuxinator
-  gem: name={{item}} state=present
-  with_items:
-    - tmuxinator
-
-- name: Install python neovim support
-  pip:
-    name={{item}}
-    state=present
-    extra_args=--user
-  with_items:
-    - neovim
-
-- name: Install python3 neovim support
-  pip:
-    name={{item}}
-    executable=pip3
-    state=present
-    extra_args=--user
-  with_items:
-    - neovim
+    - zsh
+    - terminal-notifier
+    - youtube-dl
+    - ffmpeg
 
 - name: Install packages requiring brew-cask
   homebrew_cask: name={{item}} state=present
   with_items:
     - google-chrome
+    - google-drive
     - iterm2
     - slack
     - flux
     - firefox
     - spotify
     - sketch
-
-# zsh and oh-my-zsh
-- name: install zsh
-  homebrew: name={{item}} state=present
-  with_items:
-    - zsh
-

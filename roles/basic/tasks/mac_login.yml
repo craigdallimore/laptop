@@ -1,0 +1,4 @@
+---
+
+- name: Remove itunes helper
+  command: osascript -e 'tell application "System Events" to delete login item "iTunesHelper"'

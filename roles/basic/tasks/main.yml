@@ -8,6 +8,9 @@
 - include: dock.yml
   when: ansible_os_family == 'Darwin'
   become: false
+- include: mac_login.yml
+  when: ansible_os_family == 'Darwin'
+  become: false
 
 - include: base.yml
   become: false
