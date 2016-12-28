@@ -1,4 +1,10 @@
 ---
 
+- name: Register presence of itunes helper
+  shell: osascript -e 'tell application "System Events" to get the name of every login item' | grep -p "iTunesHelper"
+  register: itunes_helper_exists
+  ignore_errors: True
+
 - name: Remove itunes helper
   command: osascript -e 'tell application "System Events" to delete login item "iTunesHelper"'
+  when: itunes_helper_exists.rc == 0

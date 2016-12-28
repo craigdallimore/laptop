@@ -16,6 +16,7 @@
     - terminal-notifier
     - youtube-dl
     - ffmpeg
+    - tree
 
 - name: Install packages requiring brew-cask
   homebrew_cask: name={{item}} state=present
