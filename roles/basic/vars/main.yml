@@ -3,7 +3,7 @@
 nvm:
   path: '~/.nvm'
   version: v0.32.1
-  node_version: '4.3.0'
+  node_version: '6.9.4'
 
 dockitems_to_remove:
   - Launchpad
