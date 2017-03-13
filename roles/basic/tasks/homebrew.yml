@@ -18,6 +18,7 @@
     - ffmpeg
     - tree
     - diff-so-fancy
+    - irssi
 
 - name: Install packages requiring brew-cask
   homebrew_cask: name={{item}} state=present
