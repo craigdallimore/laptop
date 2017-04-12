@@ -20,6 +20,7 @@
     - diff-so-fancy
     - irssi
     - tidy-html5
+    - jq
 
 - name: Install packages requiring brew-cask
   homebrew_cask: name={{item}} state=present

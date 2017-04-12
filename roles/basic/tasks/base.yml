@@ -6,7 +6,6 @@
 - name: Install gems
   gem: name={{item}} state=present
   with_items:
-    - scss-lint
     - tmuxinator
     - bropages
 
@@ -70,6 +69,7 @@
     - eslint-plugin-babel
     - jscs
     - esprima-fb
+    - sass-lint
 
 # Neovim
 # -----------------------------------------------------------------------------
