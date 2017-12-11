@@ -21,6 +21,9 @@
     - irssi
     - tidy-html5
     - jq
+    - peco
+    - gs
+    - yarn
 
 - name: Install packages requiring brew-cask
   homebrew_cask: name={{item}} state=present
